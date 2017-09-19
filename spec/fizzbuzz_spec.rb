@@ -28,10 +28,9 @@ describe 'fizzbuzz' do
             end
         end
     end
-
-    (0..1000).each do |i|
-        if i%5==0 && i%3!=0
-            it "returns \"buzz\" when passed #{i}" do
+    it "returns \"buzz\" when passed a multiple of 5 and not a multiple of 3 < 1000" do
+        (0..1000).each do |i|
+            if i%5==0 && i%3!=0
                 expect(fizzbuzz(i)).to eq "buzz"
             end
         end
