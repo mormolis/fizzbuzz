@@ -29,5 +29,13 @@ describe 'fizzbuzz' do
         end
     end
 
+    (0..1000).each do |i|
+        if i%5==0 && i%3!=0
+            it "returns \"buzz\" when passed #{i}" do
+                expect(fizzbuzz(i)).to eq "buzz"
+            end
+        end
+    end 
+
     
 end
