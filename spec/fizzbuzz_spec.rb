@@ -21,5 +21,13 @@ describe 'fizzbuzz' do
         end
     end
 
+    it "returns \"fizzbuzz\" when passed a multiple of 3 and 5 and five <1000" do
+        (0..1000).each do |i|
+            if i%5 ==0 && i%3==0
+                expect(fizzbuzz(i)).to eq "fizzbuzz"
+            end
+        end
+    end
+
     
 end
