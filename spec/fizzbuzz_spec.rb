@@ -13,5 +13,13 @@ describe 'fizzbuzz' do
         expect(fizzbuzz(15)).to eq "fizzbuzz"
     end
 
+    it "returns 'fizz' when passed a multiple of 3 < 1000" do
+        (0..1000).each do |i|
+            if i%3==0 && i%5!=0
+                expect(fizzbuzz(i)).to eq "fizz"
+             end
+        end
+    end
 
+    
 end
